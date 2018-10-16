@@ -1,0 +1,14 @@
+{
+  "name": "appie",
+  "version": "1.0.0",
+  "description": "Electron Appie",
+  "main": "main.js",
+  "scripts": {
+    "start": "./electron ."
+  },
+  "author": "Niels Koster",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^3.0.4"
+  }
+}

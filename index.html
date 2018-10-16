@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Appie</title>
+        <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Appie</h1>
+            <div id="output"></div>
+        </div>
+    </body>
+    <script>
+        require('./renderer.js');
+        console.log(process);
+        document.getElementById('output').innerHTML = `
+            <h2 class="page-header">Appie Version Data</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Node: ${process.versions.node}</li>
+                <li class="list-group-item">Chrome: ${process.versions.chrome}</li>
+            </ul>
+            <h2 class="page-header">Appie Memory Data</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Total Memory: ${process.getSystemMemoryInfo().total}</li>
+            </ul>
+        `;
+    </script>
+</html>
